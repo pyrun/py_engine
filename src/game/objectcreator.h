@@ -18,6 +18,9 @@ class ObjectCreator {
         void addXPlate( glm::vec3 l_pos = glm::vec3( 0, 0, 0), glm::vec3 l_size = glm::vec3( 1, 1, 1), glm::vec4 l_texture = glm::vec4( 0, 0, 1, 1), bool flip = false);
         void addYPlate( glm::vec3 l_pos = glm::vec3( 0, 0, 0), glm::vec3 l_size = glm::vec3( 1, 1, 1), glm::vec4 l_texture = glm::vec4( 0, 0, 1, 1), bool flip = false);
         void addZPlate( glm::vec3 l_pos = glm::vec3( 0, 0, 0), glm::vec3 l_size = glm::vec3( 1, 1, 1), glm::vec4 l_texture = glm::vec4( 0, 0, 1, 1), bool flip = false);
+
+        void addTriangles( glm::vec3 v0, glm::vec3 v1, glm::vec3 v2, glm::vec2 tex0, glm::vec2 tex1, glm::vec2 tex2);
+
     protected:
     private:
         std::vector<glm::vec3> m_vertices;

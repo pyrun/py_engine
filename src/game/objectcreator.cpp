@@ -103,3 +103,17 @@ void ObjectCreator::addYPlate( glm::vec3 l_pos, glm::vec3 l_size, glm::vec4 l_te
     m_texcoords.push_back( glm::vec2( l_texture.x, l_texture.w) );
     m_texcoords.push_back( glm::vec2( l_texture.x, l_texture.y) );
 }
+
+void ObjectCreator::addTriangles( glm::vec3 v0, glm::vec3 v1, glm::vec3 v2, glm::vec2 tex0, glm::vec2 tex1, glm::vec2 tex2) {
+    int l_vertices_end = m_vertices.size();
+    // die drei punkte verbinden
+    m_indices.push_back( l_vertices_end + 0 );
+    m_indices.push_back( l_vertices_end + 1 );
+    m_indices.push_back( l_vertices_end + 2 );
+    m_vertices.push_back( v0 );
+    m_vertices.push_back( v1 );
+    m_vertices.push_back( v2 );
+    m_texcoords.push_back( tex0 );
+    m_texcoords.push_back( tex1 );
+    m_texcoords.push_back( tex2 );
+}

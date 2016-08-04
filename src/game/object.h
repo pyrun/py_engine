@@ -6,6 +6,8 @@
 #include "../graphic/texture.h"
 #include "objectcreator.h"
 
+#include "../graphic/md2/md2.h"
+
 class Object {
     public:
         Object();
@@ -22,15 +24,21 @@ class Object {
 
             ObjectCreator Obj;
 
-            Obj.addXPlate();
+            md2Model obj;
+
+            //obj.Load("test");
+
+            //Obj.addXPlate();
 
 //            Obj.addXPlate( glm::vec3( 0, 1 ,0), glm::vec3( 0.5, 0.5 ,0.5), glm::vec4( 0, 0, 0.5, 0.5));
-            Obj.addXPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1));
+            /*Obj.addXPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1));
             Obj.addXPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1), true);
             Obj.addZPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1), true);
             Obj.addZPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1), false);
             Obj.addYPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1), true);
-            Obj.addYPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1), false);
+            Obj.addYPlate( glm::vec3( 0, 0 ,0), glm::vec3( 1, 1 ,1), glm::vec4( 0, 0, 1, 1), false);*/
+
+            //Obj.addTriangles( glm::vec3( 0, 0, 0), glm::vec3( 0.5, 1, 0), glm::vec3( 1, 0 ,0), glm::vec2( 0, 0), glm::vec2( 0.5, 1), glm::vec2( 1, 0));
 
 
 

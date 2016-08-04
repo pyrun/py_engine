@@ -8246,11 +8246,12 @@
 1463464124 c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\gui.h
 	"../graphic/graphic.h"
 
-1468531334 c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\object.h
+1470343380 c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\object.h
 	"../graphic/graphic.h"
 	"../graphic/tiny_obj_loader.h"
 	"../graphic/texture.h"
 	"objectcreator.h"
+	"../graphic/md2/md2.h"
 
 1463464124 c:\users\thelightalex\documents\projekte 2015\py_engine\src\graphic\tiny_obj_loader.h
 	<string>
@@ -8266,7 +8267,7 @@
 	<sstream>
 	"tiny_obj_loader.h"
 
-1463464124 c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\objectcreator.h
+1470340652 c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\objectcreator.h
 	<vector>
 	<glm/glm.hpp>
 
@@ -8296,7 +8297,7 @@
 1463464124 source:c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\object.cpp
 	"object.h"
 
-1463845096 source:c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\objectcreator.cpp
+1470340673 source:c:\users\thelightalex\documents\projekte 2015\py_engine\src\game\objectcreator.cpp
 	"objectcreator.h"
 
 1463464124 source:c:\users\thelightalex\documents\projekte 2015\py_engine\src\main.cpp
@@ -8384,4 +8385,13 @@
 	<cstdarg>
 	<android/log.h>
 	<assert.h>
+
+1470346069 source:c:\users\thelightalex\documents\projekte 2015\py_engine\src\graphic\md2\md2.cpp
+	"md2.h"
+	<stdlib.h>
+	<string.h>
+	"../../game/objectcreator.h"
+
+1470338910 c:\users\thelightalex\documents\projekte 2015\py_engine\src\graphic\md2\md2.h
+	<stdio.h>
 
