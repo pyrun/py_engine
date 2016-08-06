@@ -68,8 +68,12 @@ static float fract(float value) {
 void Game::Start() {
     m_config.SetTransparency( true);
 
-    Object *obj = new Object;
-    obj->Init();
+    md2Model obj;
+
+    obj.load("eagle/eagle.md2", "eagle/eagle.jpg");
+    //obj.load("motor/motor.md2", "motor/motor.tga");
+
+    obj.setFrame( 1);
 
     while( m_isRunnig) { // Runnig
         m_input.Reset();
@@ -110,6 +114,14 @@ void Game::Start() {
             cam->zoom( 1.5);
         }
 
+        if( m_input.Map.Place && !m_input.MapOld.Place)
+        {
+            obj.setFrame( obj.getFrame()+1);
+            if( obj.getFrame() >= obj.GetNumFrames()-1)
+                obj.setFrame( 0);
+            printf( "%d\n",obj.GetNumFrames());
+        }
+
         if( m_input.getResize())
             m_graphic->ResizeWindow( m_input.getResizeW(), m_input.getResizeH());
         //cos_i++;
@@ -122,7 +134,7 @@ void Game::Start() {
 
         m_graphic->GetDisplay()->Clear();
 
-        obj->draw( m_graphic->GetObjectShader(), m_graphic->GetCamera());
+        obj.draw( m_graphic->GetObjectShader(), m_graphic->GetCamera());
 
 
 		// View Cross
@@ -157,7 +169,7 @@ void Game::Start() {
         // http://www.arcsynthesis.org/gltut/Positioning/Tutorial%2005.html
 
     }
-    delete obj;
+    //delete obj;
 }
 
 /*void Game::DrawBox( GLshort bx, GLshort by, GLshort bz) {

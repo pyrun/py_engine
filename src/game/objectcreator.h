@@ -21,6 +21,12 @@ class ObjectCreator {
 
         void addTriangles( glm::vec3 v0, glm::vec3 v1, glm::vec3 v2, glm::vec2 tex0, glm::vec2 tex1, glm::vec2 tex2);
 
+        void reset() {
+            m_vertices.clear();
+            m_indices.clear();
+            m_texcoords.clear();
+        }
+
     protected:
     private:
         std::vector<glm::vec3> m_vertices;

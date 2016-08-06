@@ -6,7 +6,7 @@
 #include "../graphic/texture.h"
 #include "objectcreator.h"
 
-#include "../graphic/md2/md2.h"
+#include "md2/md2.h"
 
 class Object {
     public:
@@ -26,7 +26,9 @@ class Object {
 
             md2Model obj;
 
-            //obj.Load("test");
+            obj.load("eagle/eagle.md2", "eagle/eagle.jpg");
+
+            obj.setFrame( 1);
 
             //Obj.addXPlate();
 
@@ -40,13 +42,9 @@ class Object {
 
             //Obj.addTriangles( glm::vec3( 0, 0, 0), glm::vec3( 0.5, 1, 0), glm::vec3( 1, 0 ,0), glm::vec2( 0, 0), glm::vec2( 0.5, 1), glm::vec2( 1, 0));
 
-
-
-
-
-            vertices = Obj.getVertices();
-            indices = Obj.getIndices();
-            texcoords = Obj.getTexcoords();
+            vertices = obj.getVertices();
+            indices = obj.getIndices();
+            texcoords = obj.getTexcoords();
 /*            // x -
             vertices.push_back( glm::vec3( 0.0f, 0.0f, 0.0f) ); // 0
             vertices.push_back( glm::vec3( 0.0f, i_hight, 0.0f) ); // 1
@@ -159,7 +157,8 @@ class Object {
 
 
             //vertices.push_back( glm::vec3( 0.0f, 1.0f, 0.0f) );
-            m_texture = new Texture( "cube.bmp");
+            m_texture = new Texture( "eagle/eagle.jpg"); //cube.bmp");
+
 
             glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
             glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof( glm::vec3 ), &vertices[0], GL_STATIC_DRAW);
@@ -175,6 +174,8 @@ class Object {
             f_form.GetPos().x = m_pos.x;
             f_form.GetPos().y = m_pos.y;
             f_form.GetPos().z = m_pos.z;
+
+            f_form.GetRot().x = 3.14 + 3.14/2;
 
             Shader *shader = l_shader;
 

@@ -48,6 +48,8 @@
 		<Unit filename="game/gui.h" />
 		<Unit filename="game/input.cpp" />
 		<Unit filename="game/input.h" />
+		<Unit filename="game/md2/md2.cpp" />
+		<Unit filename="game/md2/md2.h" />
 		<Unit filename="game/obj_loader.cpp" />
 		<Unit filename="game/obj_loader.h" />
 		<Unit filename="game/object.cpp" />
