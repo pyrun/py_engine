@@ -17,6 +17,7 @@
 					<Add directory="../../SDL2_64/include" />
 					<Add directory="../../OpenGL/GL" />
 					<Add directory="../../glm" />
+					<Add directory="src/graphic/" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32 -lSDL2main -lSDL2  -lSDL2_image" />
@@ -64,6 +65,8 @@
 		<Unit filename="graphic/glerror.h" />
 		<Unit filename="graphic/graphic.cpp" />
 		<Unit filename="graphic/graphic.h" />
+		<Unit filename="graphic/py2.cpp" />
+		<Unit filename="graphic/py2.h" />
 		<Unit filename="graphic/shader.cpp" />
 		<Unit filename="graphic/shader.h" />
 		<Unit filename="graphic/shadowmap.cpp" />

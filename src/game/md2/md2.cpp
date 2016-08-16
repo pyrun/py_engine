@@ -240,6 +240,10 @@ void md2Model::setFrame(int frame)
 	if (frame<0 || frame>= m_header.numFrames)
 		return;
 
+    printf( "md2Model::setFrame %d\n", m_obj.getVertices().size());
+    printf( "md2Model::setFrame %d\n", m_obj.getTexcoords().size());
+    printf( "md2Model::setFrame %d\n", m_obj.getIndices().size());
+
     // object array reseten, da neue array platz braucht
     m_obj.reset();
 
@@ -288,6 +292,11 @@ void md2Model::setFrame(int frame)
 
         m_obj.addTriangles( vv2, vv1, vv0, tv2, tv1, tv0);
     }
+
+    printf( "md2Model::setFrame %d\n", m_obj.getVertices().size());
+    printf( "md2Model::setFrame %d\n", m_obj.getTexcoords().size());
+    printf( "md2Model::setFrame %d\n", m_obj.getIndices().size());
+
 
     // cahnge buffer
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
